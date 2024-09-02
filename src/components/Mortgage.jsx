@@ -71,20 +71,24 @@ export default function Mortgage() {
                 {(error && !mortgageTotal) ? <p>This fıeld is required</p> : ''}
               </div>
               <div className="inpt">
-                <div className={`inpt-term ${!mortgageTerm ? error : ''}`}>
+                <div className={`inpt-term ${!mortgageTerm ? error : active}`}>
                   <label>Mortgage Term</label>
-                  <input
-                    value={mortgageTerm} onChange={(e) => setMortgageTerm(Number(e.target.value))}
-                    type="number" />
-                  <span>years</span>
+                  <div className="inpt-container">
+                    <input
+                      value={mortgageTerm} onChange={(e) => setMortgageTerm(Number(e.target.value))}
+                      type="number" />
+                    <span>years</span>
+                  </div>
                   {(error && !mortgageTerm) ? <p>This fıeld is required</p> : ''}
                 </div>
-                <div className={`inpt-rate ${!interest ? error : ''}`}>
+                <div className={`inpt-rate ${!interest ? error : active}`}>
                   <label>Interest Rate</label>
-                  <input
-                    value={interest} onChange={(e) => setInterest(Number(e.target.value))}
-                    type="number" />
-                  <span>%</span>
+                  <div className="inpt-container">
+                    <input
+                      value={interest} onChange={(e) => setInterest(Number(e.target.value))}
+                      type="number" />
+                    <span>%</span>
+                  </div>
                   {(error && !interest) ? <p>This fıeld is required</p> : ''}
                 </div>
               </div>
