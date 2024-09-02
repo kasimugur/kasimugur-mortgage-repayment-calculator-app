@@ -16,7 +16,7 @@ export default function Mortgage() {
   const [monthly, setMothly] = useState('')
   const [total, setTotal] = useState('')
   const [error, setError] = useState('')
-
+  const [active, setActive] = useState('')
 
   function interestRate(sayi, yüzde) {
     Number(sayi)
@@ -28,8 +28,8 @@ export default function Mortgage() {
 
   const result = () => {
     if ((mortgageTerm && mortgageTotal && interest) === '') {
-      console.log("errorrrrr")
       setError('error')
+      setActive('active')
     } else {
       setTotal(interestRate(mortgageTotal, interest))
       setMothly(total / mortgageTerm)
@@ -43,6 +43,7 @@ export default function Mortgage() {
     setInterest('')
     setError('')
     setMothly('')
+    setActive('')
   }
 
   const data = {
@@ -60,11 +61,13 @@ export default function Mortgage() {
               <a onClick={clear}>Clear All</a>
             </div>
             <form onSubmit={(e) => e.preventDefault()} className="form">
-              <div className={`amount ${!mortgageTotal ? error : ''}`}>
+              <div className={`amount ${!mortgageTotal ? error : active}`}>
                 <label>Mortgage Amount</label>
-                <input
-                  value={mortgageTotal} onChange={(e) => setMortgageTotal(Number(e.target.value))} type="number" />
-                <span>£</span>
+                <div className="input-container">
+                  <span>£</span>
+                  <input
+                    value={mortgageTotal} onChange={(e) => setMortgageTotal(Number(e.target.value))} type="number" />
+                </div>
                 {(error && !mortgageTotal) ? <p>This fıeld is required</p> : ''}
               </div>
               <div className="inpt">
@@ -96,7 +99,6 @@ export default function Mortgage() {
                   <label>Interest Only</label>
 
                 </div>
-                {/* <p>This fıeld is required</p> */}
               </div>
               <button onClick={() => result()}  > {iconCalculator}Calculate Repayments</button>
             </form>
