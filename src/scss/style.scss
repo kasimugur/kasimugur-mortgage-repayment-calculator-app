@@ -20,8 +20,17 @@ $slat900: hsl(202, 55%, 16%);
   padding: 0;
   box-sizing: border-box;
 }
-.active{
-  .input-container{
+
+.active {
+  .input-container {
+    border-color: $lime !important;
+  }
+
+  .inpt-container {
+    border-color: $lime !important;
+  }
+
+  .rad {
     border-color: $lime !important;
   }
 
@@ -30,10 +39,12 @@ $slat900: hsl(202, 55%, 16%);
     background-color: $lime !important;
   }
 }
+
 .error {
-  .input-container{
+  .input-container {
     border-color: $red !important;
   }
+
   p {
     color: $red;
     font-size: 15px;
@@ -46,9 +57,12 @@ $slat900: hsl(202, 55%, 16%);
   }
 }
 
-@media screen {
-  
-}
+// @media screen and (max-width:0px) and (min-height:0px) {
+//   .inpt {
+//     grid-template-columns: repeat(1, 1fr) !important;
+//   }
+// }
+
 @media screen and (min-width: 76px) {
   #root {
     overflow: hidden;
@@ -70,8 +84,8 @@ $slat900: hsl(202, 55%, 16%);
     flex-wrap: wrap;
 
     .card-item {
-      flex: 1;
-      margin: 2.5rem;
+      flex: 0.9;
+      margin: 2rem;
 
       .header {
         margin-bottom: 1rem;
@@ -90,11 +104,11 @@ $slat900: hsl(202, 55%, 16%);
         color: $slat500;
 
         .amount {
-margin-bottom: 10px;
+          margin-bottom: 10px;
 
           label {
             display: block;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin: 10px 0;
           }
 
@@ -102,16 +116,15 @@ margin-bottom: 10px;
             display: flex;
             border: 1px solid $slat500;
             border-radius: 6px;
-            width: 100%;
-            &:hover{
+
+            &:hover {
               border: 1px solid $slat900 ;
             }
-          
+
             input {
-              flex-grow: 1;
-              padding: 0.5rem;
+              width: 100%;
+              border-radius: inherit;
               cursor: pointer;
-              width: 98%;
               outline: none;
               border: none;
               text-indent: 5px;
@@ -124,27 +137,119 @@ margin-bottom: 10px;
             }
 
             span {
-              padding:  0.6rem 0.7rem;
-              border-radius: 5px 0 0  5px;
+              padding: 0.6rem 0.7rem;
+              border-radius: 5px 0 0 5px;
               background-color: $slat100;
             }
           }
 
         }
-        .inpt{
+
+        .inpt {
           display: grid;
-          grid-template-columns: repeat(2 ,1fr);
-          .inpt-container{
+          grid-template-columns: repeat(2, 1fr);
+          flex-wrap: wrap;
+          gap: 15px;
+
+          .inpt-container {
+            margin: 10px 0;
+            cursor: pointer;
             display: flex;
+            border: 1px solid $slat500;
+            border-radius: 6px;
+            font-weight: bold;
+
+            &:hover {
+              border: 1px solid $slat900 ;
+            }
+
+            input {
+              width: 100%;
+
+              padding: 5px 0;
+              border-radius: 5px;
+              border: none;
+              text-indent: 10px;
+
+              &:focus {
+                border: none;
+                outline: none;
+              }
+            }
+
+            span {
+              text-align: center;
+              background-color: $slat100;
+              border-radius: 0 5px 5px 0;
+              padding: 10px;
+            }
           }
-          .inpt-term{
-            // display: flex;
-            // flex-direction: column;
+
+          .inpt-term {
+
+            margin-right: 15px;
+
+            label {
+              font-size: 14px;
+            }
+
           }
-          .inpt-rate{
-            // display: flex;
-            // flex-direction: column;
-          } 
+
+          .inpt-rate {
+            margin-left: 15px;
+
+            label {
+              font-size: 14px;
+            }
+
+          }
+        }
+
+        .type {
+          margin-top: 1rem;
+          label {
+            font-size: 14px;
+            font-weight: 600;
+          }
+
+          .rad {
+            border-radius: 6px;
+            border: 1px solid $slat900;
+            margin: 0.8em 0;
+            padding: 10px;
+
+            input {
+              text-align: center;
+              margin-right: 5px;
+              
+            }
+
+            label {
+              color: $slat900;
+              text-align: center;
+              font-weight: 800;
+              font-size: 14px;
+            }
+
+          }
+
+        }
+
+        button {
+          color: $slat900;
+          margin-top: 5px;
+          background-color: $lime;
+          border: none;
+          gap: 0.7rem;
+          padding: 0.5rem 1rem;
+          border-radius: 25px;
+          align-items: center;
+          display: flex;
+          font-weight: bold;
+          transition: transform 0.3s ease-in-out;
+          &:active{
+            transform: scale(0.95);
+          }
         }
       }
     }
