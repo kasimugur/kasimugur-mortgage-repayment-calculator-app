@@ -94,11 +94,11 @@ export default function Mortgage() {
               </div>
               <div className="type ">
                 <label>Mortgage Type </label>
-                <label className="rad" onClick={classBg()}>
+                <label className="rad" onClick={() => classBg()}>
                   <input id='radio' type="radio" name='radio' />Repayment
                   <span id="checkmark"></span>
                 </label>
-                <label className="rad">
+                <label className="rad " onClick={() => classBg()}>
                   <input id='radio' type="radio" name='radio' />Interest Only
                   <span id="checkmark"></span>
                 </label>
