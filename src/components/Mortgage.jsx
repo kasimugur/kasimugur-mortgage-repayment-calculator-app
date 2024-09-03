@@ -5,9 +5,9 @@ import { useEffect } from 'react'
 import DefaultCard from './DefaultCard'
 import ActiveCard from './ActiveCard'
 import SiteContext from '../context/SiteContext'
+import { classBg } from '../page/click'
 
 export default function Mortgage() {
-
 
 
   const [mortgageTotal, setMortgageTotal] = useState('')
@@ -92,17 +92,16 @@ export default function Mortgage() {
                   {(error && !interest) ? <p>This fıeld is required</p> : ''}
                 </div>
               </div>
-              <div className="type">
+              <div className="type ">
                 <label>Mortgage Type </label>
-                <div className="rad">
-                  <input type="radio" />
-                  <label>Repayment</label>
-                </div>
-                <div className="rad ">
-                  <input type="radio" />
-                  <label>Interest Only</label>
-
-                </div>
+                <label className="rad" onClick={classBg()}>
+                  <input id='radio' type="radio" name='radio' />Repayment
+                  <span id="checkmark"></span>
+                </label>
+                <label className="rad">
+                  <input id='radio' type="radio" name='radio' />Interest Only
+                  <span id="checkmark"></span>
+                </label>
               </div>
               <button onClick={() => result()}  > {iconCalculator}Calculate Repayments</button>
             </form>
