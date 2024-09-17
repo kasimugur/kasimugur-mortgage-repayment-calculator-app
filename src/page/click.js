@@ -7,7 +7,6 @@ function classBg() {
     ra.addEventListener('click', () => {
       removeRa()
       ra.classList.add('bg');
-
     })
 
   })

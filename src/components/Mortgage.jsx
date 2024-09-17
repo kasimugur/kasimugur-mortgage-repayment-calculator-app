@@ -17,7 +17,6 @@ export default function Mortgage() {
   const [total, setTotal] = useState('')
   const [error, setError] = useState('')
   const [active, setActive] = useState('')
-
   function interestRate(sayi, yüzde) {
     Number(sayi)
     Number(yüzde)
@@ -102,13 +101,15 @@ export default function Mortgage() {
                   <input id='radio' type="radio" name='radio' />Interest Only
                   <span id="checkmark"></span>
                 </label>
+                {(error)}
               </div>
               <button onClick={() => result()}  > {iconCalculator}Calculate Repayments</button>
             </form>
           </div>
           <div className="card">
             <div className="row">
-              {total === '' ? <DefaultCard /> : <ActiveCard />}
+              {/* {total === '' ? <DefaultCard /> : <ActiveCard />} */}
+              <ActiveCard />
             </div>
           </div>
         </div >
