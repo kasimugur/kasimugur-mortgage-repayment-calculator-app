@@ -24,12 +24,15 @@ export default function Mortgage() {
     return topl + sayi
   }
 
+useEffect(()=> {
 
+},[])
   const result = () => {
     if ((mortgageTerm && mortgageTotal && interest) === '') {
       setError('error')
       setActive('active')
     } else {
+      
       setTotal(interestRate(mortgageTotal, interest))
       setMothly(total / mortgageTerm)
     }
@@ -101,15 +104,14 @@ export default function Mortgage() {
                   <input id='radio' type="radio" name='radio' />Interest Only
                   <span id="checkmark"></span>
                 </label>
-                {(error)}
               </div>
-              <button onClick={() => result()}  > {iconCalculator}Calculate Repayments</button>
+              <button onClick={() => result()} > {iconCalculator}Calculate Repayments</button>
             </form>
           </div>
           <div className="card">
             <div className="row">
-              {/* {total === '' ? <DefaultCard /> : <ActiveCard />} */}
-              <ActiveCard />
+              {total === '' ? <DefaultCard /> : <ActiveCard />}
+              {/* <ActiveCard /> */}
             </div>
           </div>
         </div >

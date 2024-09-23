@@ -221,7 +221,8 @@ $slat1000: hsl(201, 54%, 13%);
             background-color: floralwhite;
             border-color: $lime !important;
           }
-// 
+
+          // 
           .rad {
             border-radius: 6px;
             border: 1px solid $slat700;
@@ -286,67 +287,74 @@ $slat1000: hsl(201, 54%, 13%);
 
     .card {
       flex: 1;
-      background-color: $slat700;
-      height: auto;
+      background-color: $slat900;
+      height: unset;
       border-radius: 0 15px 15px 60px;
       overflow-wrap: break-word;
 
       .row {
         font-size: 14px;
-      margin: 40px 10px;
+        margin: 40px 10px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         text-align: center;
-      span{
-        margin-top: 5rem;
-      }
-      h2 {
-        color: $white;
-        font-size: 17px;
-        margin: 25px 0;
-      }
 
-      p {
-        font-size: 13px;
-        margin-top: 10px;
-        color: $slat500;
-      }
-      .card-active{
-        background-color: $lime ;
-        margin-top: 3rem;
-        // padding: rem;
-        border-top: 5px solid $lime;
-        // border: 1px solid $lime ;
-        border-radius: 5px;
-        margin:  10px; 
-        .card-active-2{
-background-color: $slat900;
-border-radius: inherit;
-padding: 3rem;
-hr{
-  width: 100%;
-border-color:  rgba(128, 128, 128, 0.59);
-}
-#card{
-  text-align: start;
-  margin: 10px 0;
-  h5{
-    color: $slat500;
-    margin-bottom: 10px;
-  }
-h1{
-  font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 5px;
-  color: $lime;
-}
-h3{
-  color: #fff;
-}
-}
-}
-      }
+        span {
+          margin-top: 5rem;
+        }
+
+        h2 {
+          color: $white;
+          font-size: 17px;
+          margin: 25px 0;
+        }
+
+        p {
+          font-size: 13px;
+          margin-top: 10px;
+          color: $slat500;
+        }
+
+        .card-active {
+          background-color: $lime ;
+          border-top: 5px solid $lime;
+          border-radius: 5px;
+          margin: 0 5px;
+          margin-top: 3rem;
+
+          .card-active-2 {
+            background-color: $slat1000;
+            border-radius: inherit;
+            padding: 3rem;
+
+            hr {
+              width: 100%;
+              border-color: rgba(128, 128, 128, 0.59);
+            }
+
+            #card {
+              text-align: start;
+              margin: 10px 0;
+
+              h5 {
+                color: $slat500;
+                margin-bottom: 10px;
+              }
+
+              h1 {
+                font-weight: 700;
+                font-size: 30px;
+                margin-bottom: 5px;
+                color: $lime;
+              }
+
+              h3 {
+                color: #fff;
+              }
+            }
+          }
+        }
       }
     }
   }

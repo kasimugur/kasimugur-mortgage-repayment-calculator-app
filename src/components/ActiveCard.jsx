@@ -13,14 +13,14 @@ export default function ActiveCard() {
         <div className="card-active-2">
           <div id="card">
           <h5>Your monthly repayments</h5>
-          {/* <h1>£{monthly} </h1> */}
-          <h1>£1,797.74</h1>
+          <h1>£{monthly} </h1>
+          {/* <h1>£1,797.74</h1> */}
           </div>
           <hr />
           <div id="card">
           <h5>  Total you'll repay over the term</h5>
-          {/* <h3>£ {total} </h3> */}
-          <h3>£539,322.94</h3>
+          <h3>£ {total} </h3>
+          {/* <h3>£539,322.94</h3> */}
           </div>
         </div>
       </div>
