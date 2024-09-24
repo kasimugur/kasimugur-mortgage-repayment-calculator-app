@@ -32,7 +32,6 @@ useEffect(()=> {
       setError('error')
       setActive('active')
     } else {
-      
       setTotal(interestRate(mortgageTotal, interest))
       setMothly(total / mortgageTerm)
     }

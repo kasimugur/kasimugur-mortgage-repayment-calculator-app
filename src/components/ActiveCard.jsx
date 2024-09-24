@@ -7,7 +7,7 @@ export default function ActiveCard() {
   return (
     <>
       <h1>Your results</h1>
-      <p>Your results are shown below based on the information you provided.
+      <p className="active-p">Your results are shown below based on the information you provided.
         To adjust the results, edit the form and click “calculate repayments” again.</p>
       <div className="card-active">
         <div className="card-active-2">

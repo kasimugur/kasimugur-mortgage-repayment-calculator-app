@@ -15,7 +15,6 @@ $slat1000: hsl(201, 54%, 13%);
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
-
   list-style: none;
   margin: 0;
   padding: 0;
@@ -286,7 +285,7 @@ $slat1000: hsl(201, 54%, 13%);
     }
 
     .card {
-      flex: 1;
+      flex: 0.95;
       background-color: $slat900;
       height: unset;
       border-radius: 0 15px 15px 60px;
@@ -294,12 +293,19 @@ $slat1000: hsl(201, 54%, 13%);
 
       .row {
         font-size: 14px;
-        margin: 40px 10px;
+        margin: 2rem 1.58rem;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         text-align: center;
-
+        
+        h1{
+          text-align: start;
+          color: #fff;
+        }
+        .active-p{
+          text-align: start;
+        }
         span {
           margin-top: 5rem;
         }
@@ -318,15 +324,15 @@ $slat1000: hsl(201, 54%, 13%);
 
         .card-active {
           background-color: $lime ;
-          border-top: 5px solid $lime;
+          border-top: 4px solid $lime;
           border-radius: 5px;
-          margin: 0 5px;
+          margin:  0;
           margin-top: 3rem;
 
           .card-active-2 {
             background-color: $slat1000;
             border-radius: inherit;
-            padding: 3rem;
+            padding: 1rem;
 
             hr {
               width: 100%;
@@ -335,8 +341,8 @@ $slat1000: hsl(201, 54%, 13%);
 
             #card {
               text-align: start;
-              margin: 10px 0;
-
+              margin: 4px 0;
+              padding: 0.74rem;
               h5 {
                 color: $slat500;
                 margin-bottom: 10px;
