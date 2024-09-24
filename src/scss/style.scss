@@ -140,6 +140,7 @@ $slat1000: hsl(201, 54%, 13%);
               padding: 0.6rem 0.7rem;
               border-radius: 5px 0 0 5px;
               background-color: $slat100;
+              
             }
           }
 
@@ -165,7 +166,7 @@ $slat1000: hsl(201, 54%, 13%);
 
             input {
               width: 100%;
-
+              cursor: pointer;
               padding: 5px 0;
               border-radius: 5px;
               border: none;
